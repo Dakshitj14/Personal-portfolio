@@ -45,7 +45,7 @@ const Tech =()=>{
             <p data-aos='zoom in' data-aos-delay='400' className='text-gray-300 text-lg font-poppins'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nostrum!</p>
             </div>
             <div className='lg:w-[60%] w-full grid lg:grid-cols-2 grid-cols-1 justify-center items-start lg:gap-20 gap-12'>
-                {/* frontend */}
+                {/* front-end */}
                 <div data-aos = 'zoom in' className='flex flex-col justify-center items-start gap-6'>
                     <div className='bg-themered rounded-lg p-4 flex justify-center items-center transition-all duration-300 ease-in-out hover:scale-110'>
                          <MdOutlineDesignServices className='fill-white size-9' />   
@@ -64,7 +64,7 @@ const Tech =()=>{
                     </div>
 
                 </div>
-                {/* backend */}
+                {/* back-end */}
                 <div data-aos = 'zoom in' className='flex flex-col justify-center items-start gap-6'>
                     <div className='bg-themered rounded-lg p-4 flex justify-center items-center transition-all duration-300 ease-in-out hover:scale-110'>
                          <MdOutlineDesignServices className='fill-white size-9' />   
