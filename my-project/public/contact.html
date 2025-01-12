@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="src/assets/D.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Collaborate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeblack: '#202020',
+                        themered: '#f50e32',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-themeblack font-poppins">
+
+    <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-themeblack mb-4">Contact Us</h1>
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Name Input -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-themeblack">Your Name</label>
+                <input type="text" id="name" name="name" required
+                    class="w-full mt-1 px-4 py-2 border rounded-lg text-themeblack focus:outline-none focus:ring-2 focus:ring-themered focus:border-themered" />
+            </div>
+            <!-- Email Input -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-themeblack">Your Email</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full mt-1 px-4 py-2 border rounded-lg text-themeblack focus:outline-none focus:ring-2 focus:ring-themered focus:border-themered" />
+            </div>
+            <!-- Message Input -->
+            <div>
+                <label for="message" class="block text-sm font-medium text-themeblack">Message</label>
+                <textarea id="message" name="message" rows="4" required
+                    class="w-full mt-1 px-4 py-2 border rounded-lg text-themeblack focus:outline-none focus:ring-2 focus:ring-themered focus:border-themered"></textarea>
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit"
+                    class="w-full bg-themered text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

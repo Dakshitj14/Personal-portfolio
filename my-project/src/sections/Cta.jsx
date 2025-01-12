@@ -13,11 +13,15 @@ const Cta =()=>{
 
         })
     }, []);
+
+    const handleContactRedirect = () => {
+        window.location.href = '/contact.html'; // Update with the correct path to contact.html
+    };
     return(
-        <div className='w-full lg:px-[200px] px-8 py-[60px] h-full flex flex-col justify-between items-center gap-5'>
-            <div data-aos='zoom-in' className='w-full bg-[#2f2f2f] flex lg:flx-row flex-col justify-between items-center lg:p-20 p-8'>
+        <div id='Collborate' className='w-full lg:px-[200px] px-8 py-[60px] h-full flex flex-col justify-between items-center gap-5'>
+            <div data-aos='zoom-in' className='w-full bg-[#2f2f2f] flex lg:flex-row flex-col justify-between items-center lg:p-20 p-8'>
                 <h1 className='text-white lg:w-[50%] w-full lg:text-[35px] text-[30px] leading-10 lg:text-left text-center font-semibold font-poppins '>Reach Out for Collaborations</h1>
-                <button className='bg-themered hover:bg-white text-white hover:text-themered font-semibold lg:text-lg text-sm px-8 py-3 rounded mt-5 font-poppins'>Contact me!</button>
+                <button onClick={handleContactRedirect} className='bg-themered hover:bg-white text-white hover:text-themered font-semibold lg:text-lg text-sm px-8 py-3 rounded mt-5 font-poppins'>Connect with me!</button>
             </div>
             
         </div>
