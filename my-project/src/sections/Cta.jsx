@@ -15,8 +15,13 @@ const Cta =()=>{
     }, []);
 
     const handleContactRedirect = () => {
-        window.location.href = '/contact.html'; // Update with the correct path to contact.html
+        window.location.href = '/contact.html'; // from collaborate to contact form
     };
+    
+    const handleCollaborateRedirect = () => {
+        window.location.href = './sections/Cta.jsx'; // from contact to collaborate
+    };
+    
     return(
         <div id='Collborate' className='w-full lg:px-[200px] px-8 py-[60px] h-full flex flex-col justify-between items-center gap-5'>
             <div data-aos='zoom-in' className='w-full bg-[#2f2f2f] flex lg:flex-row flex-col justify-between items-center lg:p-20 p-8'>

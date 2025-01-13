@@ -18,23 +18,31 @@ app.post('/send-email', async (req, res) => {
 
     const { name, email, message } = req.body;
 
+    // Validate input
     if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required!' });
     }
 
     try {
+        // Configure the transporter
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false, // Use TLS
             auth: {
                 user: process.env.GMAIL_USER,
                 pass: process.env.GMAIL_PASS,
             },
+            tls: {
+                rejectUnauthorized: false,
+            },
         });
 
+        // Mail options
         const mailOptions = {
             from: process.env.GMAIL_USER,
             replyTo: email,
-            to: process.env.GMAIL_USER,
+            to: process.env.GMAIL_USER, // You will receive the message
             subject: `Contact Form Message from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Plain-text fallback
             html: `
@@ -60,19 +68,20 @@ app.post('/send-email', async (req, res) => {
                 </table>
             `,
         };
-        
 
-        await transporter.sendMail(mailOptions);
+        // Send email
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully:', info.response);
 
-        console.log('Email sent successfully!');
+        // Respond to the client
         res.status(200).json({ success: 'Message sent successfully!' });
     } catch (error) {
-        console.error('Error sending email:', error);
+        console.error('Error sending email:', error.message);
         res.status(500).json({ error: 'Failed to send message. Please try again later.' });
     }
 });
 
-
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="src/assets/D.png" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Collaborate</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,8 +20,11 @@
                 },
             },
         }
+
+        
     </script>
 </head>
+<header></header>
 <body class="flex items-center justify-center min-h-screen bg-themeblack font-poppins">
 
     <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
@@ -55,7 +57,16 @@
                 </button>
             </div>
         </form>
+
+        <!-- Back to Collaborate Button -->
+        <div class="mt-4">
+            <button onclick="window.location.href='./section/Cta.jsx'" 
+                class="w-full bg-themeblack text-white font-semibold px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-300">
+                Back to Portfolio
+            </button>
+        </div>
     </div>
 
+    
 </body>
 </html>
