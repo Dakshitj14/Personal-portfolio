@@ -62,7 +62,7 @@ app.post('/send-email', async (req, res) => {
                   </tr>
                   <tr>
                     <td style="background-color: #f50e32; text-align: center; padding: 10px;">
-                      <p style="margin: 0; font-size: 14px; color: #ffffff;">&copy; All Rights Reserved.</p>
+                      <p style="margin: 0; font-size: 14px; color: #ffffff;">&copy; All Rights Reserved -Dakshit Jha.</p>
                     </td>
                   </tr>
                 </table>
