@@ -25,7 +25,7 @@ const Hero =()=>{
                 <p data-aos='zoom-in' data-aos-delay = '400'  className='text-gray-200 lg:text-xl text-lg font-poppins'>"Full-stack developer with a knack for turning coffee into code. I build websites that work, apps that rock, and occasionally break things—just to fix them better. Let’s build something awesome!"</p>
 
                 <a 
-  href="https://www.google.com/"
+  href="https://docs.google.com/document/d/1IFl4m37jx43YRSr4jb-t2xCxeleoPnDk/edit?usp=drive_link&ouid=117890789775874017738&rtpof=true&sd=true"
   target="_blank" 
   rel="noopener noreferrer"
 >
